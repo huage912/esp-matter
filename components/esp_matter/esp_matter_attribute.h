@@ -433,5 +433,29 @@ attribute_t *create_supported_calendar_types(cluster_t *cluster, uint8_t *value,
 } /* attribute */
 } /* time_format_localization */
 
+namespace illuminance_measurement {
+namespace attribute {
+attribute_t *create_illuminance_measured_value(cluster_t *cluster, nullable<uint16_t> value, nullable<uint16_t> min, nullable<uint16_t> max);
+attribute_t *create_illuminance_min_measured_value(cluster_t *cluster, nullable<uint16_t> value, nullable<uint16_t> min, nullable<uint16_t> max);
+attribute_t *create_illuminance_max_measured_value(cluster_t *cluster, nullable<uint16_t> value, nullable<uint16_t> min, nullable<uint16_t> max);
+attribute_t *create_illuminance_tolerance(cluster_t *cluster, uint16_t value, uint16_t min, uint16_t max);
+attribute_t *create_illuminance_light_sensor_type(cluster_t *cluster, nullable<uint8_t> value, nullable<uint8_t> min, nullable<uint8_t> max);
+} /* attribute */
+} /* illuminance_measurement */
+
+namespace pressure_measurement {
+namespace attribute {
+attribute_t *create_pressure_measured_value(cluster_t *cluster, nullable<int16_t> value);
+attribute_t *create_pressure_min_measured_value(cluster_t *cluster, nullable<int16_t> value);
+attribute_t *create_pressure_max_measured_value(cluster_t *cluster, nullable<int16_t> value);
+attribute_t *create_pressure_tolerance(cluster_t *cluster, uint16_t value, uint16_t min, uint16_t max);
+attribute_t *create_pressure_scaled_value(cluster_t *cluster, nullable<int16_t> value);
+attribute_t *create_pressure_min_scaled_value(cluster_t *cluster, nullable<int16_t> value);
+attribute_t *create_pressure_max_scaled_value(cluster_t *cluster, nullable<int16_t> value);
+attribute_t *create_pressure_scaled_tolerance(cluster_t *cluster, uint16_t value, uint16_t min, uint16_t max);
+attribute_t *create_pressure_scale(cluster_t *cluster, int8_t value);
+} /* attribute */
+} /* pressure_measurement */
+
 } /* cluster */
 } /* esp_matter */
